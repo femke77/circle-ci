@@ -2,10 +2,10 @@ import express from 'express';
 
 import db from './config/connection.js';
 import routes from './routes/index.js';
-import seedDatabase from './seeds/seed.js';
+// import seedDatabase from './seeds/seed.js';
 
 await db();
-await seedDatabase()
+// await seedDatabase()
 const PORT = process.env.PORT || 3001;
 const app = express();
 
