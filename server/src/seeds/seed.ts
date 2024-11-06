@@ -4,6 +4,8 @@ import cleanDB from './cleanDB.js';
 
 import wordData from './wordSeeds.json' assert { type: 'json' };
 
+
+const seedDatabase = async () => {
 try {
   await db();
   await cleanDB();
@@ -17,3 +19,6 @@ try {
   console.error('Error seeding database:', error);
   process.exit(1);
 }
+}
+
+export default seedDatabase;
